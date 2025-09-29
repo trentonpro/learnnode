@@ -1,2 +1,6 @@
-console.log("Hello World");
-console.log(document, window);
+import gs from 'fs';
+
+fs.writeFileSync('hello.txt', 'Hello');
+
+
+
