@@ -1,35 +1,41 @@
-let bool = true;
-console.log(bool);
-bool = false;
-console.log(bool); 
-bool = true && false;
-bool = false && true;
-bool = false && false;
-bool = true && true;
-console.log(bool);
-bool = true || false;
-bool = false || true;
-bool = false || false;
-bool = true || true;
-console.log(bool);
-bool = !true;
-console.log(bool);
-bool = !false;
-console.log(bool);
+let array = ['apple', 'pear', 'cherry', 'mango']
 
-bool = (true && false || true) && (!false || (false && true));
-console.log(bool);
+for(fruit of array){
+    console.log(fruit);
+}
 
-bool = 10 > 5;
-bool = 10 < 5;
-bool = 10 > 10;
-bool = 10 < 10;
-bool = 10 == 10;
-bool = '10' == 10;
-bool = '10' === 10;
-bool = 10 >= 10;
-bool = 10 <= 10;
-bool = '10' != 10;
-bool = '10' !== 10;
-bool = [] == '';
-console.log(bool);
+array.forEach(fruit => {
+    console.log(fruit);
+});
+
+let obj = {
+    name: 'Trent',
+    age: 17,
+    color: 'white',
+}
+
+for(key in obj){
+    console.log(key);
+}
+
+let capital = array.map(fruit => {
+    return fruit.toUpperCase();
+});
+
+console.log(capital);
+
+let aFruits = array.filter(fruit => {
+    return fruit.includes('a');
+
+});
+
+console.log (aFruits);
+
+let nums = [1,2,3,4,5];
+
+let sum = nums.reduce((total, num) => {
+    return total + num;
+
+});
+
+console.log(sum);
