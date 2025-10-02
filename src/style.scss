@@ -1,0 +1,5 @@
+@use 'sass:color';
+$bgcolor: red;
+html, body {
+    background: color.scale($bgcolor, $lightness: -30%);
+}
