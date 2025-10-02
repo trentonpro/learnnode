@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "serve": "webpack serve --mode development"
   },
   "repository": {
     "type": "git",
@@ -13,12 +15,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/trentonpro/learnnode/issues"
   },
   "homepage": "https://github.com/trentonpro/learnnode#readme",
   "dependencies": {
     "webpack": "^5.101.3"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.4",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
   }
 }
