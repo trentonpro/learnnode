@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/trentonpro/learnnode#readme",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "webpack": "^5.101.3"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "sass": "^1.93.2",
     "sass-loader": "^16.0.5",
     "scss": "^0.2.4",
+    "simple-nunjucks-loader": "^3.2.0",
     "style-loader": "^4.0.0",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
