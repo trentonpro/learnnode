@@ -1,33 +1,16 @@
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { stripVTControlCharacters } from 'util';
-
-let response = await fetch('https://rickandmortyapi.com/api/character');
-let data = await response.json();
-console.log(data);
-
-let pages = [];
-for(let character of data.results){
-  let page = new HtmlWebpackPlugin({
-    filename: `${character.id}.html`,
-    template: "./src/views/page.njk",
-    templateParameters: {
-      character, // same as character: character
-    }
-  });
-  pages.push(page);
-}
-
-
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+ 
 export default {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    filename: 'main.js',
-    path: path.resolve(import.meta.dirname, 'dist'),
+    filename: "main.js",
+    path: path.resolve(import.meta.dirname, "dist"),
+    clean: true,
   },
   devServer: {
     static: {
-      directory: path.join(import.meta.dirname, 'public'),
+      directory: path.join(import.meta.dirname, "public"),
     },
     compress: true,
     port: 9000,
@@ -44,40 +27,20 @@ export default {
           "style-loader",
           "css-loader",
           {
-            loader: 'sass-loader',
+            loader: "sass-loader",
             options: {
               sassOptions: {
-                quietDeps: true
-              }
-            }
-          }],
-      },
-      {
-        test: /\.njk$/,
-        use: [
-          {
-            loader: 'simple-nunjucks-loader',
-            options: {}
-          }
-        ]
+                quietDeps: true,
+              },
+            },
+          },
+        ],
       }
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/views/index.njk',
-      templateParameters: {
-        characters: data.results
-      },
+      template: "./src/index.html",
     }),
-    new HtmlWebpackPlugin({
-      filename: 'about.html',
-      template: './src/views/about.njk',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'contacts.html',
-      template: './src/views/contacts.njk',
-    }),
-    ...pages,
   ],
 };
