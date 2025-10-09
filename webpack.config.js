@@ -1,5 +1,19 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+
+let pages = [];
+for(let i = 1; i<10; i++){
+  let page = new HtmlWebpackPlugin({
+    filename: `page${i}.html`,
+    template: "./src/views/page.njk",
+    templateParameters: {
+      page: i
+    }
+  });
+  pages.push(page);
+}
+
+
 export default {
   entry: './src/index.js',
   output: {
@@ -60,5 +74,6 @@ export default {
       filename: 'contacts.html',
       template: './src/views/contacts.njk',
     }),
+    ...pages,
   ],
 };
