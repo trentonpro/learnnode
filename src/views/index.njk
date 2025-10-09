@@ -3,12 +3,12 @@
   <div class="row">
     {% for character in characters %}
       <div class="col-3">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <img src="{{ character.image }}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{ character.name }}</h5>
-              <p class="card-text">{{ character.description }}</p>
-              <a href="/{{ character.id }}.html" class="btn btn-primary">Details</a>
+              <p class="card-text"></p>
+              <a href="/{{character.id}}.html" class="btn btn-primary">Details</a>
             </div>
           </div>
         </div>
