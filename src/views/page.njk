@@ -1,4 +1,38 @@
 {% extends 'src/views/partials/layout.njk' %}  
 {% block content %}
-  <h1>Page {{ page }}</h1>
+        <div class="card" style="width: 18rem;">
+          <img src="{{ character.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ character.name }}</h5>
+              <p class="card-text">
+                <table>
+                  <table class="table table-bordered table-striped">
+                  <tbody>
+                    <tr>
+                      <th>status</th>
+                      <td>{{ character.status }}</td>
+                    </tr>
+                    <tr>
+                      <th>species</th>
+                      <td>{{ character.species }}</td>
+                    </tr>
+                     <tr>
+                      <th>gender</th>
+                      <td>{{ character.gender }}</td>
+                    </tr>
+                     <tr>
+                      <th>origin</th>
+                      <td>{{ character.origin.name }}</td>
+                    </tr>
+                     <tr>
+                      <th>location</th>
+                      <td>{{ character.location.name }}</td>
+                    </tr>
+                     <tr>
+                      <th>Episodes</th>
+                      <td>{{ character.episode.length }}</td>
+                    </tr>
+
+            </div>
+          </div>
 {% endblock %}  
