@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import ItemList from './itemList.vue';
+import ItemList from '../components/itemList.vue';
 
 let newItem = ref('');
 let i = 1;
