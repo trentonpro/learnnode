@@ -1,26 +1,19 @@
 {
   "name": "learnnode",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "serve": "webpack serve --mode development",
-    "deploy": "npm run build && surge ./dist trentonpro.surge.sh"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/trentonpro/learnnode.git"
+    "deploy": "npm run build && surge ./dist kaspariscool.surge.sh"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/trentonpro/learnnode/issues"
-  },
-  "homepage": "https://github.com/trentonpro/learnnode#readme",
+  "description": "",
   "dependencies": {
+    "bulma": "^1.0.4",
     "surge": "^0.24.6",
     "webpack": "^5.101.3"
   },
@@ -29,8 +22,10 @@
     "html-webpack-plugin": "^5.6.4",
     "sass": "^1.93.2",
     "sass-loader": "^16.0.5",
-    "scss": "^0.2.4",
     "style-loader": "^4.0.0",
+    "vue": "^3.5.22",
+    "vue-loader": "^17.4.2",
+    "vue-template-compiler": "^2.7.16",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
   }
