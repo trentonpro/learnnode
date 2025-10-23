@@ -1,9 +1,14 @@
 <script setup>
-import { ref } from 'vue';
+import RouterTabs from './components/RouterTabs.vue';
  
 </script>
 <template>
-    <RouterLink to="/">ToDo</RouterLink>
-    <RouterLink to="/modals">Modals</RouterLink>
-    <RouterView></RouterView>
+<RouterTabs></RouterTabs>
+<div class="container mt-3">
+<div class="content">
+    <Suspense>  
+        <RouterView></RouterView>
+    </Suspense>
+</div>
+</div>
 </template>
